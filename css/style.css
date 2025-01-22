@@ -1,49 +1,76 @@
 * {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+/* Grid CSS */
 
 .container {
   display: grid;
-  gap: 10px;
+  height: 100vh;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  grid-auto-rows: 100px;
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+  /* grid-auto-rows: 100px; */
   grid-template-areas:
-    "m m h h h h h h h h h h"
-    "m m c c c c c c c c c c"
-    "m m f f f f f f f f f f";
+    "d d h h h h h h h h h h"
+    "d d c c c c c c c c c c"
+    "d d c c c c c c c c c c"
+    "d d c c c c c c c c c c";
 }
 
 .header {
+  background-color: yellow;
   grid-area: h;
 }
 
 .dashboard {
-  grid-area: m;
+  display: grid;
+  padding: 50px;
+  background: rgb(54, 151, 212);
+  font-size: 1.5rem;
+  grid-area: d;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+}
+
+.dashboard1 {
+  display: grid;
+}
+
+.dashboard-h2 {
+  font-size: 1.5 rem;
+}
+
+.dashboard2 {
+  display: grid;
+  gap: 5px;
+  align-items: center;
+}
+
+#item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+img {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.dashboard3 {
+  display: grid;
+  gap: 20px;
+  margin-top: auto;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
 }
 
 .content {
+  background-color: violet;
   grid-area: c;
-}
-
-.footer {
-  grid-area: f;
-}
-
-/* Basic CSS */
-.container > div:nth-child(1n) {
-  background-color: #96ce96;
-}
-
-.container > div:nth-child(2n) {
-  background-color: #eeff69;
-}
-
-.container > div:nth-child(3n) {
-  background-color: #c11515;
-}
-
-.container > div:nth-child(4n) {
-  background-color: #160101;
 }
